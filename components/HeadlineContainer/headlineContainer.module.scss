@@ -1,0 +1,53 @@
+@use '../../variables' as *;
+@use '../../styles/mixins' as *;
+
+.headlineContainer {
+	@include bentoBox;
+	align-items: center;
+
+	h2, .headline {
+		align-self: flex-start;
+	}
+	
+	.photoContainer {
+		margin-bottom: 32px;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		.userPhoto {
+			border-radius: 100%;
+			margin: auto;
+			height: 8rem;
+			width: 8rem;
+		}
+	
+	}
+	@include md {
+        width: 45%;
+		align-items: normal;
+
+    }
+
+    @include lg {
+        width: 45%;
+		align-items: normal;
+
+    }
+
+	@include xl {
+        width: 45%;
+		align-items: normal;
+    }
+	.photoContainer {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		.userPhoto {
+			border-radius: 100%;
+			margin: auto;
+			height: 8rem;
+			width: 8rem;
+		}
+
+	}
+}

@@ -1,0 +1,26 @@
+@use '../../variables' as *;
+@use '../../styles/mixins' as *;
+
+.noArticles {
+	@include bentoBox;
+}
+
+.articlesContainer {
+	@include bentoBox;
+
+	@include md {
+		width: 100%;
+	}	
+
+	@include lg {
+		width: 92%;
+	}	
+
+	@include xl {
+		width: 92%;
+	}	
+
+	a:visited {
+		color: #4A4A4A;
+	}
+}

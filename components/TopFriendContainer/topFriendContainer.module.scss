@@ -1,0 +1,104 @@
+@use '../../variables' as *;
+@use '../../styles/mixins' as *;
+
+.topFriendContainer {
+	@include bentoBox;
+
+	.friendPhoto {
+		border: 2px solid black;
+		padding: 3px;
+	}
+
+	@include md {
+		width: 100%;
+		gap: 2rem;
+    }
+
+	@include lg {
+		width: 100%;
+		gap: 2rem;
+    }
+
+	@include xl {
+		width: 100%;
+		gap: 2rem;
+    }
+
+	a:visited {
+		color: #4A4A4A;
+	}
+
+	.friendsContainer {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+		align-content: center;
+		justify-content: center;
+		gap: 1rem;
+
+		.topFriend {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.photoContainer {
+			position: relative;
+			min-height: 100px;
+			img {
+				border-radius: 100%;
+			}
+			
+		}
+		.iconContainer {
+			padding: 6px;
+			display: flex;
+			flex-direction: row;
+			width: 100%;
+			gap: 10px;
+		}
+	}
+}
+
+// .friendContainer {
+// 	position: relative;
+// 	color: $font-color;
+// 	border-radius: 12px;
+// 	background-color: $secondary-color;
+// 	display: flex;
+// 	flex-direction: column;
+// 	justify-content: center;
+// 	align-items: center;
+// 	padding: 2rem;
+// 	width: 92vw;
+// 	gap: 2rem;
+
+// 	@include md {
+// 		// Styles only for medium devices
+// 		width: 45%;
+// 		padding: 2rem;
+// 		align-items: stretch;
+// 		justify-content: flex-start;
+// 		gap: 2rem;
+// 		order: 0;
+// 	}
+// 	@include lg {
+// 		// Styles only for medium devices
+// 		width: 45%;
+// 		padding: 2rem;
+// 		align-items: stretch;
+// 		justify-content: flex-start;
+// 		gap: 2rem;
+// 		order: 0;
+// 	}
+
+// 	@include xl {
+// 		// Styles only for medium devices
+// 		width: 45%;
+// 		padding: 2rem;
+// 		align-items: stretch;
+// 		justify-content: flex-start;
+// 		gap: 2rem;
+// 		order: 0;
+// 	}
+// }

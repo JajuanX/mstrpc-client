@@ -1,0 +1,14 @@
+.colorsForm {
+	display: flex;
+	flex-direction: column;
+	border-radius: 12px;
+	background-color: white;
+	width: 100%;
+	padding: 1rem;
+	gap: 1rem;
+	label {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+}

@@ -1,0 +1,27 @@
+@use '../../variables' as *;
+@use '../../styles/mixins' as *;
+
+.musicContainer {
+	@include bentoBox;
+
+	@include md {
+		// Styles only for medium devices
+		justify-content: center;
+		width: 45%;
+		order: 2;
+	}
+
+	@include lg {
+		// Styles only for medium devices
+		justify-content: center;
+		width: 45%;
+		order: 2;
+	}
+
+	@include xl {
+		// Styles only for medium devices
+		justify-content: center;
+		width: 45%;
+		order: 2;
+	}
+}

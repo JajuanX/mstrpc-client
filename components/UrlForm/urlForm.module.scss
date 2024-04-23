@@ -1,0 +1,29 @@
+.linksForm {
+	display: flex;
+	flex-direction: column;
+	border-radius: 12px;
+	background-color: white;
+	padding: 1rem;
+	gap: 1rem;
+	width: 100%;
+	label {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		input {
+			width: 70%;
+		}
+	}
+	.saveButton, .defaultButton {
+		padding: 1rem 2rem;
+		border-radius: 12px;
+		border: none;
+		background-color: #F05E23;
+		padding: .5rem 1rem;
+		font-size: 1rem;
+	}
+	.defaultButton {
+		background-color: white;
+		border: #F05E23 solid 1px;
+	}
+}

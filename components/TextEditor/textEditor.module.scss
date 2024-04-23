@@ -1,0 +1,13 @@
+.buttonContainer {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 10px;
+
+	button {
+		border: #ccc solid 1px;
+		background-color: #f8f8f8;
+		padding: .25rem;
+	}
+
+}

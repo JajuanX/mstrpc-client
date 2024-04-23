@@ -1,0 +1,30 @@
+@use '../../variables' as *;
+
+.button {
+    border: none;
+	position: absolute;
+	right: .6rem;
+	top: 1.2rem;
+    padding: 0;
+    width: 30px; // Fixed width
+    height: 30px; // Fixed height to create a circular shape
+    cursor: pointer;
+    font-size: 1.2rem; // Adjust font size for the dots
+    border-radius: 50%; // Circular shape
+    color: white;
+    background-color: transparent; // Primary color by default
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+
+    &:before {
+        content: '\2022 \A \2022 \A \2022'; // Unicode for bullet points, separated by line breaks
+        white-space: pre-line; // Allows line breaks in the content
+        line-height: 0.5; // Adjust line height to bring dots closer
+    }
+
+    &:hover {
+        opacity: 0.9;
+    }
+}

@@ -1,0 +1,21 @@
+.headlineForm {
+	display: flex;
+	flex-direction: column;
+	border-radius: 12px;
+	background-color: white;
+	padding: 1rem;
+	gap: 1rem;
+	label {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.saveButton {
+		background-color: #F05E23;
+		padding: .5rem 1rem;
+		font-size: 1.25rem;
+		padding: 1rem 2rem;
+		border-radius: 12px;
+		border: none;
+	}
+}

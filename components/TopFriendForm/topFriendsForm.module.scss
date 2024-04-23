@@ -1,0 +1,144 @@
+@use '../../variables' as *;
+
+
+.TopFriendsForm {
+	display: flex;
+	flex-direction: column;
+	border-radius: 12px;
+	background-color: white;
+	padding: 1rem;
+	gap: 1rem;
+	position: relative;
+	width: 100%;
+
+	.createFriend {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+
+		.label {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			font-size: .75rem;
+			gap: .25rem;
+			color: white;
+			input {
+				border-radius: 6px;
+				border: 2px solid #444;
+				padding: 0 8px;
+				height: 2.5rem;
+				width: 100%;
+			}
+		}
+	}
+	.saveButton, .defaultButton {
+		padding: 1rem 2rem;
+		border-radius: 12px;
+		border: none;
+		background-color: #F05E23;
+		padding: .5rem 1rem;
+		font-size: 1rem;
+	}
+	.defaultButton {
+		background-color: white;
+		border: #F05E23 solid 1px;
+	}
+
+	.reorderItemContainer {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		position: relative;
+		border-radius: 15px;
+		border: #444 solid 3px;
+
+		.position {
+			font-size: 2rem;
+			top: -12px;
+			left: -12px;
+			z-index: 10;
+			background-color: white;
+			border-radius: 100%;
+			width: 40px;
+			height: 40px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.photoContainer {
+			position: relative;
+			width: fit-content;
+			min-height: 50px;
+
+			.iconContainer {
+				background-color: white;
+				border-radius: 100%;
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				padding: 6px;
+			}
+	
+		}
+		.removeButton {
+			color: white;
+			background-color: red;
+			cursor: pointer;
+			position: absolute;
+			top: -10px;
+			left: -10px;
+			border: none;
+			border-radius: 50%;
+			font-size: .7rem;
+			height: 30px;
+			width: 30px;
+		}
+	}
+
+	.topFriendsSection {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+
+		.topFriendsContainer {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			gap: 1rem;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			text-decoration: underline;
+			.friendContainer {
+				.imageContainer {
+					position: relative;
+					width: fit-content;
+					min-height: 100px;
+					img {
+						border-radius: 100%;
+						
+					}
+				}
+				.iconContainer {
+					background-color: white;
+					border-radius: 100%;
+					position: absolute;
+					right: 0;
+					bottom: 0;
+					padding: 6px;
+				}
+
+				button {
+					border: none;
+					background: none;
+					text-decoration: underline;
+
+				}
+
+			}
+		}
+	}
+
+}
