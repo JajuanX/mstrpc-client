@@ -1,0 +1,122 @@
+@use '../variables' as *;
+
+.user {
+	min-height: 100vh;
+	background-color: $primary-color;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2rem;
+	position: relative;
+	padding: 4rem 1rem;
+
+    @include md {
+        // Styles only for medium devices
+        display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-content: center;
+		padding: 3rem;
+		align-items: stretch;
+		justify-content: center;
+    }
+
+    @include lg {
+        // Styles only for medium devices
+        display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-content: center;
+		padding: 3rem;
+		align-items: stretch;
+		justify-content: center;
+    }
+
+    @include xl {
+        // Styles only for medium devices
+        display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-content: center;
+		padding: 3rem;
+		align-items: stretch;
+		justify-content: center;
+    }
+	
+	.socialContainer {
+		position: relative;
+		overflow-x: hidden;
+		width: 92vw;
+		display: flex;
+		flex-direction: column;
+		align-content: center;
+
+		@include md {
+			// Styles only for medium devices
+			order: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			align-content: center;
+			justify-content: center;
+			gap: 2rem;
+			width: 92vw;
+			overflow-x: visible;
+		}
+		
+		@include lg {
+			width: 100%;
+			// Styles only for medium devices
+			order: 1;
+			display: flex;
+			align-items: center;
+			justify-items: center;
+			flex-direction: column;
+			align-content: center;
+			justify-content: center;
+			gap: 2rem;
+			overflow-x: visible;
+
+		}
+		@include xl {
+			width: 100%;
+			// Styles only for medium devices
+			order: 1;
+			display: flex;
+			align-items: center;
+			justify-items: center;
+			flex-direction: column;
+			align-content: center;
+			justify-content: center;
+			gap: 2rem;
+		}
+	}
+
+	.heading {
+		align-self: flex-start;
+	}
+
+	.buttonContainer {
+		width: 100%;
+		position: fixed;
+		top: 0;
+		display: flex;
+		align-items: center;
+		z-index: 30;
+		.showHideButton {
+			background-color: white;
+			border: none;
+			padding: .25rem;
+			margin: auto;
+		}
+	}
+
+}
+
+.loadingState {
+	color: white;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
