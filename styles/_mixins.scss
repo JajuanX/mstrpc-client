@@ -1,0 +1,10 @@
+@mixin bentoBox {
+	display: flex;
+	flex-direction: column;
+	border-radius: 12px;
+	padding: 16px 24px 24px;
+	width: 100%;
+	color: white;
+	position: relative;
+
+}
