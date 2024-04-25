@@ -7,7 +7,6 @@ const DEFAULT_COLORS = {
 }
 
 function useProfileData() {
-	console.log('hello');
 	const [userName, setUserName] = useState(null);
 	const [profile, setProfile] = useState(null);
 	const [profilePhoto, setProfilePhoto] = useState(null);

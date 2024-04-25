@@ -49,12 +49,7 @@ function useUserData() {
 				password
 			})
 			window.sessionStorage.setItem("token", response.data.token);
-			const currentUser = await getCurrentUser();
-			setUser(currentUser);
-			return {
-				success: true,
-				msg: 'Successfully logged in user'
-			}
+
 		} catch (error) {
 			return {
 				success: false,
