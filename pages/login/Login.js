@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation'
 import styles from './Login.module.scss';
 import Button from '@/components/Button/Button';
 import InputField from '@/components/InputField/InputField';
+import Link from 'next/link';
 
 export default function Login() {
 	const {login} = useUserContext();
@@ -17,9 +18,7 @@ export default function Login() {
 		}
 		const response = await login(userCredentials.email, userCredentials.password);
 		console.log(response);
-		if (response.success) {
-			router.push('/')
-		}
+		router.push('/')
 	}
 	
 
@@ -40,6 +39,9 @@ export default function Login() {
 				/>
 				<Button type='submit'>Log In</Button>
 			</form>
+			<Link className={styles.notMember} href="/signup">
+					Not a Member
+				</Link>
 		</div>
 	)
 }

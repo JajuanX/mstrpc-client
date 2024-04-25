@@ -5,6 +5,7 @@ import Link from 'next/link';
 import SubscriptionService from '@/services/subscription.service';
 import { useProfile } from "../context/profileContext";
 import Head from 'next/head';
+import Image from 'next/image';
 
 
 export default function Home() {
@@ -19,13 +20,11 @@ export default function Home() {
 		const getProfiles = async () => {
 			try {
 				const profiles = await getRandomProfiles();
-				console.log(profiles);
-				// const top = profiles.filter((profile, index) =>  index < 4 && profile.name) || [];
-				// const bottom = profiles.filter((_profile, index) =>  index >= 4) || [];
+				const top = profiles.slice(0, 4) || [];
+				const bottom = profiles.slice(4) || [];
 				
-				console.log('try', top);
-				// setBottomSection(bottom);
-				setTopSection(profiles);
+				setBottomSection(bottom);
+				setTopSection(top);
 				setLoading(false);
 			} catch(err) {
 				console.error(err);
@@ -76,7 +75,15 @@ export default function Home() {
 								>
 									<div className={styles.cardDetails}>
 										<div className={styles.photoContainer}>
-											<img className={styles.userPhoto} src={profile.image_url}  alt='profile' />
+											<Image style={{
+													border: `2px solid ${profile.colors.font}`
+												}}  
+												height={100} 
+												width={100} 
+												className={styles.userPhoto} 
+												src={profile.image_url}  
+												alt='profile' 
+											/>
 										</div>
 										<div>{profile.displayName}</div>
 									</div>
@@ -100,7 +107,15 @@ export default function Home() {
 								>
 									<div className={styles.cardDetails}>
 										<div className={styles.photoContainer}>
-											<img className={styles.userPhoto} src={profile.user_info?.image_url}  alt='profile' />
+											<Image style={{
+													border: `2px solid ${profile.colors.font}`
+												}} 
+												height={100} 
+												width={100} 
+												className={styles.userPhoto} 
+												src={profile.user_info?.image_url}  
+												alt='profile' 
+											/>
 										</div>
 										<div>{profile.displayName}</div>
 									</div>
@@ -111,7 +126,7 @@ export default function Home() {
 					}
 				</section>
 				{!isLoading && !user && 
-					<Link className={styles.signUp} href="/sign-up">
+					<Link className={styles.signUp} href="/login">
 					Sign Up / Log In
 				</Link>}
 
@@ -138,34 +153,3 @@ export default function Home() {
 		</>
 	)
 }
-
-{/* <section className={styles.topUsers}>
-	<h2>Top Users</h2>
-	<div className={styles.topPerformersContainer}>
-	{
-		topPerformers?.map((performers, index) => {
-			return (
-				<p key={performers._id}>
-					<Link href={`http://localhost:3000/${performers._id}`}>#{index + 1}. {performers._id}</Link>
-				</p>
-			)
-		})
-	}
-	</div>
-</section> */}
-			{/* {!isLoading && !user?.customer ? <Button
-				type='button'
-				typeOfButton="primary"
-				onClick={openCustomerPortal}
-			>
-				Subscribe To MSTRPC
-			</Button>
-			:
-			<Button
-				type='button'
-				typeOfButton="primary"
-				onClick={openSubscriptionPortal}
-			>
-				Open Subscription Portal
-			</Button>
-			} */}
