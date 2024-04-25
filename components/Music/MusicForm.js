@@ -5,6 +5,7 @@ import convertToEmbedUrl from '@/utils/convertToEmbedUrl';
 import InputField from '../InputField/InputField';
 import ProfileService from '@/services/profile.service';
 import Button from '../Button/Button';
+import MusicSearch from '../MusicSearch/MusicSearch';
 
 
 const MusicForm = ({notifyUser, musicUrl, setMusicUrl, closeModal}) => {
@@ -34,6 +35,7 @@ const MusicForm = ({notifyUser, musicUrl, setMusicUrl, closeModal}) => {
     return (
         <form onSubmit={updateMusic} className={styles.musicForm}>
 			<h2>Update Music</h2>
+			<MusicSearch />
 			<div>
 				<InputField 
 					label='Insert Apple Music URL' 
